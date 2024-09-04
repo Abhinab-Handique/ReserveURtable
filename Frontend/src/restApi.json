@@ -56,19 +56,8 @@
                 "image": "./dinner4.png",
                 "title": "MUSSELS SOUP",
                 "category": "Dinner"
-            },
-            {
-                "id": 7,
-                "image": "./dinner5.png",
-                "title": "ITALIAN SPAGHETTI",
-                "category": "Dinner"
-            },
-            {
-                "id": 8,
-                "image": "./dinner6.png",
-                "title": "GRILLED FISH",
-                "category": "Dinner"
             }
+            
         ],
         "team": [
             {
