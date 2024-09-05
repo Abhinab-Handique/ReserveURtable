@@ -13,21 +13,20 @@ const Reservation = () => {
   const [time, setTime] = useState("");
   const [phone, setPhone] = useState(0);
   const navigate = useNavigate();
-  
+
   const handleReservation = async (e) => {
     e.preventDefault();
     try {
-        const { data } = await axios.post(
-            "http://localhost:4000/api/v1/reservation/send",  // Adjusted URL
-            { firstName, lastName, email, phone, date, time },
-            {
-              headers: {
-                "Content-Type": "application/json",
-              },
-              withCredentials: true,
-            }
-          );
-          
+      const { data } = await axios.post(
+        "http://localhost:8000/reservation/send",
+        { firstName, lastName, email, phone, date, time },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          withCredentials: true,
+        }
+      );
       toast.success(data.message);
       setFirstName("");
       setLastName("");
@@ -37,7 +36,7 @@ const Reservation = () => {
       setDate("");
       navigate("/success");
     } catch (error) {
-      toast.error(error);
+      toast.error(error.response.data.message);
     }
   };
 
