@@ -15,7 +15,7 @@ function Home() {
       <Menu></Menu>
       <WhoAreWe></WhoAreWe>
       <Team></Team>
-      <Reservation></Reservation>
+
       
     </div>
   )
